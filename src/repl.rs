@@ -1,5 +1,5 @@
 //! Main REPL logic.
-const EASY-REPL_VERS: &'static str = "0.2.2";
+const EASY_REPL_VERS: &'static str = "0.2.2";
 
 use std::{collections::HashMap, io::Write, rc::Rc};
 
@@ -365,7 +365,7 @@ Other commands:
     fn handle_command(&mut self, name: &str, args: &[&str]) -> anyhow::Result<CommandStatus> {
         match name {
             "version" => {
-		let curr_Version = EASY-REPL_VERS;
+		let curr_Version = EASY_REPL_VERS;
                 writeln!(&mut self.out, format!("v{}",curr_Version))?;
                 Ok(CommandStatus::Done)
             }
