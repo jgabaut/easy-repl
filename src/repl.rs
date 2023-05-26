@@ -1,5 +1,5 @@
 //! Main REPL logic.
-const EASY-REPL_VERS: &'static str = "0.2.1-patched";
+const EASY-REPL_VERS: &'static str = "0.2.2";
 
 use std::{collections::HashMap, io::Write, rc::Rc};
 

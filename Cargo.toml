@@ -1,6 +1,6 @@
 [package]
 name = "easy-repl"
-version = "0.2.1-patched"
+version = "0.2.2"
 authors = ["Jędrzej Boczar <jedrzej.boczar@gmail.com>","jgabaut"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
