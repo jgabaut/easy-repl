@@ -13,7 +13,7 @@ use crate::command::{ArgsError, Command, CommandStatus, CriticalError};
 use crate::completion::{completion_candidates, Completion};
 
 /// Reserved command names. These commands are always added to REPL.
-pub const RESERVED: &[(&str, &str, &str)] = &[("version","Show easy-repl version"),("help", "Show this help message"), ("quit", "Quit repl")];
+pub const RESERVED: &[(&str, &str)] = &[("version","Show easy-repl version"),("help", "Show this help message"), ("quit", "Quit repl")];
 
 /// Read-eval-print loop.
 ///
@@ -366,7 +366,7 @@ Other commands:
         match name {
             "version" => {
 		let curr_Version = EASY_REPL_VERS;
-                writeln!(&mut self.out, format!("v{}",curr_Version))?;
+                writeln!(&mut self.out, "{}", format!("v{}",curr_Version))?;
                 Ok(CommandStatus::Done)
             }
             "help" => {
